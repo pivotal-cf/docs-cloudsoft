@@ -1,0 +1,50 @@
+---
+title: Installing the Cloudsoft Service Broker Tile
+owner: Partners
+---
+
+This topic provides instructions for how to install and configure the Cloudsoft Service Broker tile. 
+
+## <a id="install"></a>Install with Pivotal Ops Manager
+
+1. Download the Cloudsoft Service Broker tile from [Pivotal Network](https://network.pivotal.io). 
+
+1. In Ops Manager, click **Import a Product** and browse to the Cloudsoft Service Broker tile you downloaded. 
+
+1. Click **Add** next to the uploaded Cloudsoft Service Broker in the Ops Manager **Available Products** view to add Cloudsoft Service Broker to your staging area. 
+
+1. Click the newly added tile.
+
+1. Configure the Cloudsoft Service Broker tile:
+
+	![Configure tile](images/tile_config.png)
+
+1. Click **Apply changes** to install Cloudsoft Service Broker.
+
+## <a id="login"></a>Log in to Cloudsoft Service Broker
+
+1. In Apps Manager, search for the **cloudsoft-service-broker-manager** app in the **cloudsoft-service-broker-org** and **cloudsoft-service-broker-space**. Select the app to bring view the dashboard. 
+
+	![App dashboard](app_dashboard.png)
+
+1. Navigate to `https://cloudsoft-service-broker-manager.YOUR-SYSTEM-DOMAIN` in your browser. 
+
+1. Log into Cloudsoft Service Broker using the `SECURITY_USER_NAME` and `SECURITY_USER_PASSWORD` environment variables from the application dashboard:
+
+	![Credentials](credentials.png) 
+
+
+
+##<a id="using"></a> Use Cloudsoft Service Broker
+
+1. Click **View Service Access**. 
+
+	![Getting started](getting_started.png)
+
+1. Select **cloudsoft-service-broker** from the **Service Broker** dropdown menu. 
+
+	![Access](service_access.png)
+
+1. Click on the **+** button to add a new service and fill in the form
+
+	![Add service](add_service.png)
