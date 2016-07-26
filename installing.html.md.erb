@@ -15,13 +15,12 @@ This topic provides instructions for how to install and configure the Cloudsoft 
 
 1. Click the newly added tile.
 
-1. Configure the Cloudsoft Service Broker tile:
-
-    In the Locations section there are two locations to configure, first is the location to which the broker should deploy new service instances; second is the location
-    to which Cloudsoft AMP should persist its state.  These are written as key/value properties, you can find more information [here](http://docs.cloudsoft.io/locations/reference/index.html) and [here](http://docs.cloudsoft.io/operations/persistence/index.html)
-
-    If you intend to create services that connect to MSSQL or Oracle databases, you are required to supply the JDBC drivers for these in that section.  Simply provide the download location that should be used.
+1. In the **Locations** section, specify the following as key/value properties:
+	* **Deployment Location**: This is where the broker deploys new service instances. See the [Cloudsoft documentation](http://docs.cloudsoft.io/locations/reference/index.html).
+	* **Persistence Location**: This is where Cloudsoft AMP saves state information in order to persist its state. See the [Cloudsoft documentation](http://docs.cloudsoft.io/operations/persistence/index.html).
 	![Configure tile](images/tile_config.png)
+
+1. If you want to create services that connect to MSSQL or Oracle databases, complete the **JDBC Drivers** section. Provide the download location of the JDBC drivers.
 
 1. Click **Apply changes** to install Cloudsoft Service Broker.
 
