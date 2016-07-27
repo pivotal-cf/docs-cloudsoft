@@ -1,26 +1,26 @@
 ---
-title: Installing the Cloudsoft Service Broker Tile
+title: Installing the Cloudsoft Service Broker
 owner: Partners
 ---
 
-This topic provides instructions for how to install and configure the Cloudsoft Service Broker tile. 
+This topic provides instructions for how to install and configure Cloudsoft Service Broker for Pivotal Cloud Foundry (PCF). 
 
-## <a id="install"></a>Install with Pivotal Ops Manager
+## <a id="install"></a>Install and Configure the Cloudsoft Service Broker
 
-1. Download the Cloudsoft Service Broker tile from [Pivotal Network](https://network.pivotal.io). 
+1. Download the Cloudsoft Service Broker product file from [Pivotal Network](https://network.pivotal.io). 
 
-1. In Ops Manager, click **Import a Product** and browse to the Cloudsoft Service Broker tile you downloaded. 
+1. In Ops Manager, click **Import a Product** and browse to the Cloudsoft Service Broker product file you downloaded. 
 
 1. Click **Add** next to the uploaded Cloudsoft Service Broker in the Ops Manager **Available Products** view to add Cloudsoft Service Broker to your staging area. 
 
 1. Click the newly added tile.
 
-1. In the **Locations** section, specify the following as key/value properties:
-	* **Deployment Location**: This is where the broker deploys new service instances. See the [Cloudsoft documentation](http://docs.cloudsoft.io/locations/reference/index.html).
-	* **Persistence Location**: This is where Cloudsoft AMP saves state information in order to persist its state. See the [Cloudsoft documentation](http://docs.cloudsoft.io/operations/persistence/index.html).
+1. In the **Locations** section, complete the following fields:
+	* **Deployment Location**: Enter the location where the broker deploys new service instances. See the [Locations in AMP](http://docs.cloudsoft.io/locations/reference/index.html) topic in the Cloudsoft documentation for more information.
+	* **Persistence Location**: Enter the location where the Cloudsoft Application Management Platform (AMP) saves state information in order to persist its state. See the [Persistence](http://docs.cloudsoft.io/operations/persistence/index.html) topic in the Cloudsoft documentation for more information.
 	![Configure tile](images/tile_config.png)
 
-1. If you want to create services that connect to MSSQL or Oracle databases, complete the **JDBC Drivers** section. Provide the download location of the JDBC drivers.
+1. To create services that connect to MSSQL or Oracle databases, click the **JDBC Drivers** section and provide the download location of the JDBC drivers.
 
-1. Click **Apply changes** to install Cloudsoft Service Broker.
+1. Click **Apply changes** to install the Cloudsoft Service Broker.
 
