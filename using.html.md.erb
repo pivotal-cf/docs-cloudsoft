@@ -19,6 +19,8 @@ This document describes how to use the Cloudsoft Service Broker to create new se
 
 ##<a id="service"></a> Add a Service
 
+You can add new service definitions to the Cloudsoft Service Broker using blueprints available for Cloudsoft AMP.  You can compose blueprints from Apache Brooklyn entities such as Cassandra, CouchBase, CouchDB, ElasticSearch, MongoDB, Redis, Riak, MariaDB, MySQL, PostgreSQL, and more.  The Cloudsoft Service Broker also makes it easy to create services to securely access data on pre-existing databases.   
+
 1. Click **View Service Access**. 
 
 	![Getting started](getting_started.png)
@@ -39,6 +41,13 @@ This document describes how to use the Cloudsoft Service Broker to create new se
 		1. Click **Add Plan**.  
 	* Click **Save**.
 
+    **or if creating a service to provide read-only users on an existing database**:
+    ![DBAccess](db_access.png)
+    * **Select your database type**: Choose the DB type of the existing database.
+    * **DB host / IP**: Provide the host or IP of the existing database.
+    * **DB admin user username** and **DB admin user password**: Provide the credentials of a user on the database that can create new users.
+    * **DB instance name**: Provide the database name of the existing database.
+    * **DB service name**: Specify the name of the new service. 
 ##<a id="access"></a> Control Service Access 
 
 1. From **Service Access**, choose a service to define access to.
