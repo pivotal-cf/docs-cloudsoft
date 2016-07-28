@@ -19,7 +19,12 @@ This document describes how to use the Cloudsoft Service Broker to create new se
 
 ##<a id="service"></a> Add a Service
 
-You can add new service definitions to the Cloudsoft Service Broker using blueprints available for Cloudsoft AMP.  You can compose blueprints from Apache Brooklyn entities such as Cassandra, CouchBase, CouchDB, ElasticSearch, MongoDB, Redis, Riak, MariaDB, MySQL, PostgreSQL, and more.  The Cloudsoft Service Broker also makes it easy to create services to securely access data on pre-existing databases.   
+Operators can use the Cloudsoft Service Broker to create two kinds of services:
+
+* **Custom**: Creating a custom service requires a blueprint for the Cloudsoft Application Management Platform (AMP). You can use an existing blueprint or write your own from Apache Brooklyn entities such as Cassandra, CouchBase, CouchDB, ElasticSearch, MongoDB, Redis, Riak, MariaDB, MySQL, PostgreSQL, and more. For more information, see the [Writing Application Blueprints](http://docs.cloudsoft.io/blueprints/index.html) topic in the Cloudsoft documentation.
+* **Database Access**: Creating a database access service enables the Cloudsoft Service Broker to securely access data from a pre-existing database.
+
+To add a service, perform the following steps:
 
 1. Click **View Service Access**. 
 
@@ -29,29 +34,33 @@ You can add new service definitions to the Cloudsoft Service Broker using bluepr
 
 	![Access](service_access.png)
 
-1. Click the **+** button to add a new service and complete the fields:
+1. Click the **+** button to add a new service. 
+	* To add a custom service, perform the following steps:
     ![Add service](add_service.png)
-	* **Service Name** and **Service Description**: Specify the name and description of the new service. 
-	* **Icon URL**: Provide the URL to an icon to use to represent the service. 
-	* **Service Type**: Select a service type. 
-	* **Blueprint**: If necessary, edit the blueprint.
-	* **Plans**: Describe your Service Plans. For each plan, perform the following steps:
-		1. Provide a name and description.
-		1. Describe the configuration that makes the plan different from others.
-		1. Click **Add Plan**.  
-	* Click **Save**.
-
-    **or if creating a service to provide read-only users on an existing database**:
+    	* Select the **Custom** tab. 
+		* **Service Name** and **Service Description**: Specify the name and description of the new service. 
+		* **Icon URL**: Provide the URL to an icon to use to represent the service. 
+		* **Service Type**: Select a service type. 
+		* **Blueprint**: Provide the blueprint.
+		* **Plans**: Describe your Service Plans. For each plan, perform the following steps:
+			1. Provide a name and description.
+			1. Describe the configuration that makes the plan different from others.
+			1. Click **Add Plan**.  
+		* Click **Save**.
+	* To add a database access service, perform the following steps:
     ![DBAccess](db_access.png)
-    * **Select your database type**: Choose the DB type of the existing database.
-    * **DB host / IP**: Provide the host or IP of the existing database.
-    * **DB admin user username** and **DB admin user password**: Provide the credentials of a user on the database that can create new users.
-    * **DB instance name**: Provide the database name of the existing database.
-    * **DB service name**: Specify the name of the new service. 
+
+		* Select the **Database Access** tab.
+	    * **Select your database type**: Select the type of the existing database.
+	    * **DB host / IP**: Provide the host or IP of the existing database.
+	    * **DB port**: Provide the port of the existing database.
+	    * **DB admin user username** and **DB admin user password**: Provide the credentials of a user on the database that can create new users.
+	    * **DB instance name**: Provide the database name of the existing database.
+	    * **DB service name**: Specify the name of the new service. 
+
 ##<a id="access"></a> Control Service Access 
 
 1. From **Service Access**, choose a service to define access to.
-1. Select the organizations that should be able to see and use the service. 
-
     ![Make visible](make_visible.png)
-
+1. Select the organizations that should be able to see and use the service. 
+1. Click **Save**.
