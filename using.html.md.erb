@@ -3,7 +3,7 @@ title: Using the Cloudsoft Service Broker Tile
 owner: Partners
 ---
 
-This document describes how to use the Cloudsoft Service Broker to create new services and control service access. 
+This document describes how to use the Cloudsoft Service Broker to create new services, control service access and view runtime information. 
 
 ## <a id="login"></a>Log in to Cloudsoft Service Broker
 
@@ -21,36 +21,21 @@ This document describes how to use the Cloudsoft Service Broker to create new se
 
 Operators can use the Cloudsoft Service Broker to create two kinds of services:
 
-* **Custom**: Creating a custom service requires a blueprint for the Cloudsoft Application Management Platform (AMP). You can use an existing blueprint or write your own from Apache Brooklyn entities such as Cassandra, CouchBase, CouchDB, ElasticSearch, MongoDB, Redis, Riak, MariaDB, MySQL, PostgreSQL, and more. For more information, see the [Writing Application Blueprints](http://docs.cloudsoft.io/blueprints/index.html) topic in the Cloudsoft documentation.
 * **Database Access**: Creating a database access service enables the Cloudsoft Service Broker to securely access data from a pre-existing database.
+* **AMP Service**: Creating an AMP service requires a blueprint for the Cloudsoft Application Management Platform (AMP). You can use an existing blueprint or write your own from Apache Brooklyn entities such as Cassandra, CouchBase, CouchDB, ElasticSearch, MongoDB, Redis, Riak, MariaDB, MySQL, PostgreSQL, and more. For more information, see the [Writing Application Blueprints](http://docs.cloudsoft.io/blueprints/index.html) topic in the Cloudsoft documentation.
 
 To add a service, perform the following steps:
 
-1. Click **View Service Access**. 
+1. Click **Databases**. 
 
 	![Getting started](getting_started.png)
 
 1. Select **cloudsoft-service-broker** from the **Service Broker** drop-down menu. 
 
-	![Access](service_access.png)
-
 1. Click the **+** button to add a new service. 
-	* To add a custom service, perform the following steps:
-    ![Add service](add_service.png)
-    	* Select the **Custom** tab. 
-		* **Service Name** and **Service Description**: Specify the name and description of the new service. 
-		* **Icon URL**: Provide the URL to an icon to use to represent the service. 
-		* **Service Type**: Select a service type. 
-		* **Blueprint**: Provide the blueprint.
-		* **Plans**: Describe your Service Plans. For each plan, perform the following steps:
-			1. Provide a name and description.
-			1. Describe the configuration that makes the plan different from others.
-			1. Click **Add Plan**.  
-		* Click **Save**.
-	* To add a database access service, perform the following steps:
-    ![DBAccess](db_access.png)
 
-		* Select the **Database Access** tab.
+	* To add a database access service, perform the following steps:
+    ![Databases](databases_add.png)
 	    * **Select your database type**: Select the type of the existing database.
 	    * **DB host / IP**: Provide the host or IP of the existing database.
 	    * **DB port**: Provide the port of the existing database.
@@ -58,9 +43,36 @@ To add a service, perform the following steps:
 	    * **DB instance name**: Provide the database name of the existing database.
 	    * **DB service name**: Specify the name of the new service. 
 
+To add a new AMP Service, perform the following steps:
+
+1. Click **AMP Services**
+
+1. Click the **+** button to add a new service.
+
+	* To add an AMP service, perform the following steps:
+    ![AMP service](amp_services_new.png)
+		* **Service Name** and **Service Description**: Specify the name and description of the new service. 
+		* **Icon URL**: Provide the URL to an icon to use to represent the service. 
+		* **Service Type**: Select a service type. 
+		* **Blueprint**: Provide the blueprint.
+		* **Plans**: Describe your Service Plans. For each plan, perform the following steps:
+        ![AMP Service Plan](amp_services_new_plan.png)
+			1. Provide a name and description.
+			1. Describe the configuration that makes the plan different from others.
+			1. Click **Add Plan**.  
+		* Click **Save**.
+
 ##<a id="access"></a> Control Service Access 
 
-1. From **Service Access**, choose a service to define access to.
+1. From any of **Databases**, **AMP Services**, or **All CF Service** choose a service to define access to.
     ![Make visible](make_visible.png)
+1. Click Access Control.
 1. Select the organizations that should be able to see and use the service. 
 1. Click **Save**.
+
+##<a id="runtime"></a> View Runtime Information
+
+1. From either **Databases** or **AMP Services**, click the services in use tab.  
+1. Choose a service to view runtime information.
+    ![View runtime](amp_services_runtime.png)
+1. Select the entity from the topology graph.
